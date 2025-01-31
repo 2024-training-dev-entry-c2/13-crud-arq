@@ -1,0 +1,6 @@
+<lib-list-blogs
+  [blogs]="blogs$ | async"
+  [currentBlog]="currentBlog$ | async"
+  (onCreateBlog)="handlePatchBlog($event)"
+  (onSelectBlog)="handleSelectBlog($event)"
+></lib-list-blogs>

@@ -1,0 +1,1 @@
+export { blogRoutes } from "./infrastructure/ui/routes/blog.routes";

@@ -1,0 +1,20 @@
+<form [formGroup]="form" class="blog-form" (ngSubmit)="submit()">
+  <h3 class="blog-form__title">{{ form.getRawValue().id ? 'Editar blog' : 'Crear blog' }}</h3>
+  <label class="blog-form__label">
+    <span class="blog-form__text">Name</span>
+    <input class="blog-form__input" type="text" name="name" formControlName="name">
+  </label>
+  <label class="blog-form__label">
+    <span class="blog-form__text">Location</span>
+    <input class="blog-form__input" type="text" name="location" formControlName="location">
+  </label>
+  <label class="blog-form__label">
+    <span class="blog-form__text">Review</span>
+    <input class="blog-form__input" type="text" name="review" formControlName="review">
+  </label>
+  <label class="blog-form__label">
+    <span class="blog-form__text">Rating</span>
+    <input class="blog-form__input" type="text" name="rating" formControlName="rating">
+  </label>
+  <button class="blog-form__button">{{ form.getRawValue().id ? 'Editar' : 'Crear' }}</button>
+</form>

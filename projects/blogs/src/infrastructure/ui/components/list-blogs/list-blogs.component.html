@@ -1,0 +1,30 @@
+<lib-modal action="Crear blog" #modal>
+  <lib-blog-form 
+    [blog]="currentBlog()"
+    (onSubmit)="handleSubmit($event)"
+  ></lib-blog-form>
+</lib-modal>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Ubicación</th>
+      <th>Rating</th>
+      <th>Review</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let blog of blogs()">
+      <td>{{blog.name}}</td>
+      <td>{{blog.location}}</td>
+      <td>{{blog.rating}}</td>
+      <td>{{blog.review}}</td>
+      <td>
+        <button (click)="selectBlog(blog.id)">Editar</button>
+        <button>Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
